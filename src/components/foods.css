@@ -1,0 +1,144 @@
+/* foods.css - Full Luxury Dark Theme */
+
+.menu-page-container.dark-theme {
+    direction: rtl;
+    background-color: #0d0d0d; /* שחור פחם עמוק */
+    min-height: 100vh;
+    padding-bottom: 80px;
+    color: #e0e0e0;
+    /* שימוש בפונט סריפי מערכתי יוקרתי התואם ללוגו */
+    font-family: "David", "Times New Roman", serif;
+}
+
+/* כותרת הדף */
+.menu-header {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.menu-title-gold {
+    font-size: 4rem;
+    color: #c5a059; /* זהב מט */
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.title-underline {
+    width: 100px;
+    height: 1px;
+    background: #c5a059;
+    margin: 20px auto;
+    opacity: 0.6;
+}
+
+/* סרגל כפתורי סינון (מיון וקטגוריות) */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.gold-outline-btn {
+    background: transparent !important;
+    border: 1px solid rgba(197, 160, 89, 0.4) !important;
+    color: #c5a059 !important;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.gold-outline-btn:hover {
+    background: #c5a059 !important;
+    color: #0d0d0d !important;
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+/* תפריט דרופדאון כהה */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-content-dark {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1a1a1a;
+    min-width: 200px;
+    border: 1px solid #c5a059;
+    z-index: 1000;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.7);
+}
+
+.dropdown-container:hover .dropdown-content-dark {
+    display: block;
+}
+
+.dropdown-item-dark {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #e0e0e0;
+    transition: 0.3s;
+    text-align: right;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.dropdown-item-dark:hover {
+    background-color: #c5a059;
+    color: #0d0d0d;
+}
+
+/* הגדרות הגריד - מקסימום 3 פריטים בשורה */
+.menu-grid-wrapper {
+    display: grid;
+    /* מינימום 420px כדי להבטיח שלא יהיו יותר מ-3 כרטיסים במסך רגיל */
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); 
+    gap: 50px;
+    padding: 20px 8%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* הגבלה קשיחה ל-3 עמודות במסכים רחבים מאוד */
+@media (min-width: 1600px) {
+    .menu-grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* התאמה למובייל - מעבר לטור אחד */
+@media (max-width: 600px) {
+    .menu-grid-wrapper {
+        grid-template-columns: 1fr;
+        padding: 20px 5%;
+    }
+    
+    .menu-title-gold {
+        font-size: 2.8rem;
+    }
+}
+
+.no-items-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #c5a059;
+    font-size: 1.4rem;
+    margin-top: 60px;
+    font-style: italic;
+}
+
+/* ביטול ברירות מחדל של דפדפנים */
+button {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}

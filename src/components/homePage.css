@@ -1,0 +1,147 @@
+.dark-luxury-page {
+    background-color: #0a0a0a; /* שחור עמוק מאוד */
+    color: #e0e0e0;
+    direction: rtl;
+    min-height: 100vh;
+    font-family: 'Times New Roman', serif;
+}
+
+/* --- עיצוב אזור התמונה המרכזית --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* תופס 70% מגובה המסך */
+    overflow: hidden;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) contrast(1.1); /* הכהיה קלה של התמונה למראה יוקרתי */
+}
+
+/* שכבת מעבר שגורמת לתמונה להיעלם לתוך השחור בתחתית */
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, #0a0a0a, transparent);
+}
+
+.hero-overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.brand-name-gold {
+    font-size: 5rem;
+    color: #c5a059;
+    letter-spacing: 5px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.est-text {
+    color: #c5a059;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+}
+
+.ornament-line {
+    width: 100px;
+    height: 1px;
+    background: #c5a059;
+    margin: 20px auto;
+}
+
+/* --- תוכן הדף --- */
+.content-container {
+    max-width: 1100px;
+    margin: -50px auto 0; /* מעלה את התוכן מעט על התמונה */
+    position: relative;
+    z-index: 20;
+    padding: 40px 20px;
+}
+
+.section-title-gold {
+    color: #c5a059;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.story-p {
+    text-align: center;
+    line-height: 2;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.experience-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.luxury-card {
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(20, 20, 20, 0.8);
+    transition: 0.4s;
+}
+
+.luxury-card:hover {
+    border-color: #c5a059;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+.card-title {
+    color: #c5a059;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.gold-action-btn {
+    background: transparent;
+    color: #c5a059;
+    border: 1px solid #c5a059;
+    padding: 15px 45px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gold-action-btn:hover {
+    background: #c5a059;
+    color: #0a0a0a;
+}
+
+.signature-gold {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #c5a059;
+    padding: 40px 0;
+}

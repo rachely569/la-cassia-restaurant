@@ -1,0 +1,160 @@
+/* shoppingBug.css - Luxury Dark Cart */
+
+.shopping-cart-page {
+    max-width: 1000px;
+    margin: 60px auto; 
+    padding: 40px;
+    background-color: #1a1a1a; /* כרטיס סל כהה */
+    color: #e0e0e0;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    direction: rtl;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.shopping-cart-page h1 {
+    text-align: center;
+    color: #c5a059; /* זהב */
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cart-item-card {
+    display: flex; 
+    gap: 25px;
+    background-color: #0d0d0d; /* רקע פנימי כהה יותר */
+    border: 1px solid rgba(197, 160, 89, 0.1);
+    padding: 20px;
+    align-items: center;
+    transition: border-color 0.3s;
+}
+
+.cart-item-card:hover {
+    border-color: rgba(197, 160, 89, 0.4);
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.cart-item-card .item-details {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.item-name {
+    color: #c5a059;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.item-price, .item-subtotal {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* בקרת כמות מודרנית */
+.item-quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.quantity-btn {
+    background: transparent;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: #c5a059;
+    color: #0d0d0d;
+}
+
+.item-quantity {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* סיכום הזמנה */
+.cart-summary {
+    background-color: #0d0d0d;
+    padding: 30px;
+    text-align: center;
+    border-top: 2px solid #c5a059;
+}
+
+.cart-summary h2 {
+    color: #c5a059;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.total-price {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.checkout-btn {
+    background-color: #c5a059 !important;
+    color: #0d0d0d !important;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 350px;
+}
+
+.checkout-btn:hover {
+    background-color: #e2ba71 !important;
+    transform: translateY(-2px);
+}
+
+.empty-cart {
+    text-align: center;
+    color: #c5a059;
+    margin-top: 100px;
+    font-weight: 200;
+    font-size: 2rem;
+}

@@ -1,0 +1,105 @@
+/* nav.css - Dark Luxury Style */
+
+.navbar-boutique {
+    background-color: #121212; /* שחור עמוק */
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3); /* קו זהב דק */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    direction: rtl;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.nav-logo {
+    color: #c5a059; /* זהב */
+    font-size: 1.8rem;
+    font-family: 'serif';
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* אפקט קו תחתון בזהב שמופיע בריחוף ובמצב פעיל */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: #c5a059;
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #c5a059;
+}
+
+/* עיצוב המשתמש המחובר */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid rgba(197, 160, 89, 0.3);
+    padding-right: 15px;
+}
+
+.user-name {
+    color: #c5a059;
+    font-size: 0.9rem;
+}
+
+.logout-gold-btn {
+    background: none;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 0; /* מראה מרובע ויוקרתי */
+    transition: 0.3s;
+}
+
+.logout-gold-btn:hover {
+    background-color: #c5a059;
+    color: #121212;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .navbar-boutique {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    .nav-links-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

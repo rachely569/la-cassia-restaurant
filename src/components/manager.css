@@ -1,0 +1,121 @@
+/* manager.css - Full Professional Design */
+
+.admin-panel {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #0a0a0a;
+    direction: rtl;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-panel h2 {
+    color: #c5a059;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+/* כרטיס מוצר במצב תצוגה */
+.admin-product-card {
+    background: #111111;
+    border: 1px solid #222;
+    display: flex;
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.admin-product-card:hover {
+    border-color: #c5a059;
+}
+
+.admin-card-img {
+    width: 250px;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.admin-card-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-card-body h3 {
+    color: #c5a059;
+    margin: 0 0 10px 0;
+}
+
+.admin-card-body p {
+    color: #b5b5b5;
+    margin-bottom: 10px;
+}
+
+/* חלונית עריכה יוקרתית */
+.edit-card-layout {
+    display: flex;
+    gap: 20px;
+    background: #161616;
+    padding: 20px;
+    border: 1px solid #c5a059;
+    width: 100%;
+}
+
+.edit-form-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form-fields input, 
+.edit-form-fields textarea {
+    background-color: #f4eee1 !important; /* שמנת קריאה */
+    color: #1a1a1a !important;
+    border: 1px solid #c5a059;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+/* הפס המוזהב מתחת לכפתורים */
+.admin-card-actions, .edit-actions-line {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(197, 160, 89, 0.5); /* הפס המוזהב */
+}
+
+button {
+    background: transparent;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c5a059;
+    color: #000;
+}
+
+.save-btn {
+    background: #c5a059 !important;
+    color: #000 !important;
+}
+
+.btn-delete {
+    border-color: #8b0000 !important;
+    color: #8b0000 !important;
+}
