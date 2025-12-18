@@ -1,15 +1,16 @@
 import React from "react"
 import './homePage.css'
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <div className="dark-luxury-page">
-      {/* אזור התמונה המרכזית */}
       <header className="hero-section">
         <div className="hero-image-wrapper">
           <img src="/imgs/תמונה רקע מסעדה.webp" alt="La Cassia Interior" className="main-hero-img" />
           <div className="hero-overlay-content">
-            <span className="est-text">EST. 2024</span>
+            <span className="est-text">EST. 1983</span>
             <h1 className="brand-name-gold">La Cassia</h1>
             <div className="ornament-line"></div>
             <p className="hero-tagline">חוויה קולינרית של שקט ואיכות</p>
@@ -42,9 +43,9 @@ export default function HomePage() {
         </section>
 
         <div className="button-wrapper">
-          <button className="gold-action-btn" onClick={() => window.location.href='/foods'}>
-             לצפייה בתפריט המלא
-          </button>
+         <button className="gold-action-btn" onClick={() => navigate('/foods')}>
+    לצפייה בתפריט המלא
+</button>
         </div>
       </main>
 

@@ -78,7 +78,7 @@ const foodSlice = createSlice({
             state.totalPrice = calculateTotalPrice(state);
         },
         dellInBug: (state, action) => {
-            const exissting = state.yiskyot.find(b => b.id === action.payload);
+            const exissting = state.shoppingCart.find(b => b.id === action.payload);
 
             if (!exissting) {
                 return;
@@ -87,7 +87,7 @@ const foodSlice = createSlice({
                 (exissting.quantity -= 1)
             }
             else {
-                state.yiskyot = state.yiskyot.filter(d => d.id !== action.payload)
+                state.shoppingCart = state.shoppingCart.filter(d => d.id !== action.payload)
 
             }
             state.totalPrice = calculateTotalPrice(state);

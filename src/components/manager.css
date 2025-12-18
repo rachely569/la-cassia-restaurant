@@ -119,3 +119,7 @@ button:hover {
     border-color: #8b0000 !important;
     color: #8b0000 !important;
 }
+.managment{
+     color: '#c5a059'
+     /* textAlign : 'center' */
+}
