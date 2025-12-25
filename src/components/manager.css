@@ -1,4 +1,4 @@
-/* manager.css - Full Professional Design */
+/* manager.css - Full Professional Boutique Edition */
 
 .admin-panel {
     max-width: 1100px;
@@ -6,16 +6,23 @@
     padding: 20px;
     background-color: #0a0a0a;
     direction: rtl;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-.admin-panel h2 {
+.managment {
     color: #c5a059;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: 3px;
     margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* כפתור הוספת פריט חדש */
+.add-item-container {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 /* כרטיס מוצר במצב תצוגה */
@@ -39,6 +46,10 @@
     object-fit: cover;
 }
 
+.admin-card-img-edit {
+    width: 180px;
+}
+
 .admin-card-body {
     flex: 1;
     padding: 20px;
@@ -47,17 +58,27 @@
     justify-content: space-between;
 }
 
-.admin-card-body h3 {
+.admin-card-info h3 {
     color: #c5a059;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
 }
 
-.admin-card-body p {
+.admin-card-info p {
     color: #b5b5b5;
+    font-size: 0.85rem;
+    height: 40px;
+    overflow: hidden;
     margin-bottom: 10px;
 }
 
-/* חלונית עריכה יוקרתית */
+.admin-card-price {
+    color: #c5a059;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* חלונית עריכה והוספה */
 .edit-card-layout {
     display: flex;
     gap: 20px;
@@ -65,6 +86,11 @@
     padding: 20px;
     border: 1px solid #c5a059;
     width: 100%;
+}
+
+.add-item-layout {
+    margin: 0 auto 30px;
+    max-width: 800px;
 }
 
 .edit-form-fields {
@@ -84,15 +110,16 @@
     width: 100%;
     box-sizing: border-box;
     text-align: right;
+    font-family: inherit;
 }
 
-/* הפס המוזהב מתחת לכפתורים */
-.admin-card-actions, .edit-actions-line {
+/* פס פעולות וכפתורים */
+.edit-actions-line {
     display: flex;
     gap: 15px;
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid rgba(197, 160, 89, 0.5); /* הפס המוזהב */
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
 }
 
 button {
@@ -103,6 +130,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+    font-family: inherit;
 }
 
 button:hover {
@@ -119,7 +147,8 @@ button:hover {
     border-color: #8b0000 !important;
     color: #8b0000 !important;
 }
-.managment{
-     color: '#c5a059'
-     /* textAlign : 'center' */
+
+.btn-delete:hover {
+    background: #8b0000 !important;
+    color: #fff !important;
 }
