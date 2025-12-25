@@ -14,7 +14,6 @@ export default function Register() {
     const userFromStore = useSelector(state => state.usersSlice.users);
 
     const add = () => {
-        // ולידציה בסיסית
         if(!nameRef.current.value || !userName.current.value || !passwordRef.current.value) {
             alert("אנא מלא את כל שדות החובה");
             return;

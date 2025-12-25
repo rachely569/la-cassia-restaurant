@@ -2,27 +2,23 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addFood, deleteItems, updateFood } from "../features/foodSlice";
 import './manager.css';
-// בדף הזה צריך להוריד את כל הסטייל המקומי!!!!!!!!
-// לבדוק מה כל שורה עושה - למפות את כל הדף
+
 export default function Manager() {
+
     const dispatch = useDispatch();
     const foodList = useSelector(state => state.food_Slice.foods);
-    const [editingId, setEditingId] = useState(null);//לבדוק מה הזה 
-    const [editedItem, setEditedItem] = useState({});//לבדוק מה הזה 
-    const [isAdding, setIsAdding] = useState(false);//לבדוק מה הזה 
+    const [editingId, setEditingId] = useState(null);
+    const [editedItem, setEditedItem] = useState({})
+    const [isAdding, setIsAdding] = useState(false);
     const [newItem, setNewItem] = useState({ name: '', price: '', description: '', img: '' });
 
     return (
         <div className="admin-panel">
             <h2 className="managment">MANAGEMENT</h2>
-{/* kלבדוק של הרסתי את הסטייל למקרה ש..
  style={{color: '#c5a059', textAlign: 'center'}}
-*/}
             <div style={{ textAlign: 'center', marginBottom: '25px' }}>
-{/* לשנות כדי שזה יהיה בCSS */}
                 {!isAdding && <button onClick={() => setIsAdding(true)} className="save-btn">NEW ITEM +</button>}
             </div>
-{/* לבדוק מה זה  */}
             {isAdding && (
                 <div className="edit-card-layout" style={{ margin: '0 auto 30px', maxWidth: '800px' }}>
                     <div className="edit-form-fields">
@@ -37,12 +33,10 @@ export default function Manager() {
                     </div>
                 </div>
             )}
-{/* לבדוק מה זה */}
             <div className="food-list">
                 {foodList.map(food => (
                     <div key={food.id} className="admin-product-card">
                         {editingId === food.id ? (
-                            // editingId לבדוק מה זה- 
                             <div className="edit-card-layout">
                                 <img src={editedItem.img} className="admin-card-img" style={{width: '180px'}} alt="preview" />
                                 <div className="edit-form-fields">
@@ -56,8 +50,7 @@ export default function Manager() {
                                 </div>
                             </div>
                         ) : (
-                            // אם זה לא(editingId) אז מה קורה
-                            <>ד
+                            <>
                                 <img src={food.img} className="admin-card-img" alt={food.name} />
                                 <div className="admin-card-body">
                                     <div style={{flex: 1}}>

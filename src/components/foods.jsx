@@ -1,5 +1,4 @@
 import React, { useMemo } from "react"
-// useMemo - לבדוק מה זה עושה בדיוק
 import { useDispatch, useSelector } from "react-redux"
 import { filterByCategory, sortByPrice } from '../features/foodSlice';
 import Food from "./food";
@@ -11,18 +10,16 @@ export default function Foods() {
         foods: foodFromStore = [], 
         filteredFoods = [], 
         selectedCategory = 'הכל',   
-        sortOrder = 'none',         
+        // sortOrder = 'none',         
     } = useSelector(state => state.food_Slice);
-    // לבדוק מה זה
 
-    // ניקוי רווחים אוטומטי כדי למנוע כפילויות בתפריט
     const listCategoey = useMemo(() => {
         const allCategories = foodFromStore.map(item => item.nameCategory ? item.nameCategory.trim() : '');
         return ['הכל', ...new Set(allCategories)];
-    }, [foodFromStore]);    // לבדוק מה זה
+    }, [foodFromStore]); 
 
 
-    const sortButtonText = `מיון מחיר ${sortOrder === 'asc' ? '↑' : sortOrder === 'desc' ? '↓' : ''}`;
+    // const sortButtonText = `מיון מחיר ${sortOrder === 'asc' ? '↑' : sortOrder === 'desc' ? '↓' : ''}`;
     const displayList = filteredFoods.length > 0 || selectedCategory !== 'הכל' ? filteredFoods : foodFromStore;
 
     return (
@@ -35,8 +32,8 @@ export default function Foods() {
             <div className="filter-wrapper"> 
                 <div className="action-buttons">
                     <button className="gold-outline-btn" onClick={() => dispatch(sortByPrice())}>
-                        {sortButtonText}
-                        {/* למה לא עובד טקסת כפתור */}
+                        {/* {sortButtonText} */}
+                        מיון מחיר
                     </button>
 
                     <div className="dropdown-container"> 
@@ -44,7 +41,6 @@ export default function Foods() {
                             קטגוריה: {selectedCategory} <span className="arrow-small">▼</span>
                         </button>
                         <div className="dropdown-content-dark">
-                                {/* // לבדוק מה זה */}
 
                             {listCategoey.map((cat, index) => (
                                 <div
@@ -59,8 +55,6 @@ export default function Foods() {
                     </div>
                 </div>
             </div>
-
-            {/* מעבר לתצוגת גריד יוקרתית של כמה מוצרים בשורה */}
             <div className="menu-grid-wrapper">
                 {displayList.map(f => (
                     <div className="boutique-food-card" key={f.id}><Food props={f} /></div>

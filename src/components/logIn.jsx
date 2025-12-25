@@ -12,14 +12,13 @@ export default function LogIn() {
   const dispatch = useDispatch();
 
   const isExiste = () => {
-    const cu = userFromStore.find(x => x.userName === nameRef.current.value);//לבדוק האם זה מיובא מהסלייס ואם לא אז מאיפה userNameה
+    const cu = userFromStore.find(x => x.userName === nameRef.current.value);
 
     if (cu === undefined) {
       alert('שם המשתמש אינו קיים, הנך מועבר להרשמה.');
       navigate('/Register');
     } else if (cu.password === passwordRef.current.value) {
       localStorage.setItem('currentUser', JSON.stringify(cu));
-// JSON.stringify(cu)
 
       dispatch(setCurrentUser(cu));
       if (cu.isManager) {
