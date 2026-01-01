@@ -42,7 +42,6 @@ export default function Register() {
                 <input type="text" placeholder="שם משתמש" ref={userName} required />
                 <input type="password" placeholder="סיסמה" ref={passwordRef} required />
                 <input type="email" placeholder="כתובת אימייל" ref={emailRef} />
-                
                 <button onClick={add} type="button">צור חשבון</button>
             </div>
         </div>

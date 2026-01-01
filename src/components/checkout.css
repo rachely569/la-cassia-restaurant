@@ -1,0 +1,115 @@
+.checkout-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #0a0a0a;
+    direction: rtl;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.boutique-title {
+    color: #c5a059;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.checkout-section {
+    background: #111;
+    padding: 30px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.checkout-section h3 {
+    color: #c5a059;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.input-group input, .payment-options select {
+    width: 100%;
+    background-color: #f4eee1; /* שמנת קריאה */
+    border: 1px solid #c5a059;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b5b5b5;
+}
+
+.order-summary {
+    margin-top: 20px;
+    background: rgba(197, 160, 89, 0.05);
+    padding: 15px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #b5b5b5;
+}
+
+.summary-row.total {
+    border-top: 1px solid #c5a059;
+    padding-top: 10px;
+    color: #c5a059;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.checkout-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.payment-btn {
+    background-color: #c5a059;
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.payment-btn:hover {
+    background-color: #e2bc76;
+}
+
+.back-link-btn {
+    background: none;
+    border: none;
+    color: #c5a059;
+    text-decoration: underline;
+    cursor: pointer;
+}

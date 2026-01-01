@@ -10,7 +10,8 @@ import MoreDetails from './components/moreDetails';
 import PageNotFound from './components/pageNotFound';
 import Manager from './components/manager';
 import MainContainer from './components/mainContainer';
-
+// import Checkout from './components/checkout';
+import Checkout from './components/checkout';
 function App() {
   return <>
     <Nav ></Nav>
@@ -22,6 +23,8 @@ function App() {
       <Route path='register' element={<Register ></Register>}></Route>
       <Route path='logIn' element={<LogIn > </LogIn>}></Route>
       <Route path='shopingBug' element={<ShoppingBug></ShoppingBug>}></Route>
+      {/* <Route path='checkout' element={<Checkout></Checkout>}></Route> */}
+      <Route path='checkout' element={<Checkout></Checkout>}></Route>
       <Route path='homePage' element={<HomePage></HomePage>}></Route>
       <Route path='manager' element={<Manager></Manager>}></Route>
       <Route path='moreDetails/:id' element={<MoreDetails></MoreDetails>}></Route>

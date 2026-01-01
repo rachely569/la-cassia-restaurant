@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import './food.css'
 import { addLike, addToBug } from "../features/foodSlice";
+import './food.css'
 
 export default function Food(props) {
+
     const [isAdded, setIsAdded] = useState(false);
     const dispatch = useDispatch();
     const food = props.props;
@@ -28,7 +29,7 @@ export default function Food(props) {
         dispatch(addLike({ id: food.id }))
     }
 
-    return (
+    return <>
         <div className="boutique-card">
             <div className="card-image-section">
                 <img className="card-main-img" src={food.img} alt={food.name} />
@@ -39,6 +40,7 @@ export default function Food(props) {
             </div>
 
             <div className="card-content-section">
+                
                 <h3 className="card-item-title">{food.name}</h3>
 
                 <p className="card-item-desc">
@@ -48,6 +50,7 @@ export default function Food(props) {
                 <div className="card-meta-info">
                     <span className="likes-count">אהבו את המנה: {food.like}</span>
                 </div>
+
                 <div className="card-action-links">
                     <button className="link-style-btn" onClick={moveToMoreDetails}>
                         פרטים נוספים
@@ -58,5 +61,5 @@ export default function Food(props) {
                 </div>
             </div>
         </div>
-    );
+    </>
 }

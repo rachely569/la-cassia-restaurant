@@ -1,17 +1,31 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addToBug, dellInBug } from "../features/foodSlice"; 
+import { useNavigate } from "react-router-dom";
 import './shoppingBug.css'
 
 export default function ShoppingBug() {
+
     const viewShopingBug = useSelector(state => state.food_Slice.shoppingCart)
     const total = useSelector(state => state.food_Slice.totalPrice); 
     const dispatch = useDispatch();
+    const navigate=useNavigate();
     
     if (viewShopingBug.length === 0) {
         return <h2 className="empty-cart" dir="rtl">סל הקניות שלך ריק. הגיע הזמן להתפנק...</h2>;
     }
+
+    // useEffect=(
+
+    // [])
+
     
+
+    const moveToCheckout =()=>{
+        navigate('/checkout');
+    }
+   
+   
     return (
         <div className="shopping-cart-page" dir="rtl">
             <h1>YOUR ORDER</h1>
@@ -56,7 +70,8 @@ export default function ShoppingBug() {
                 <p className="total-price">
                     סה"כ לתשלום: {total.toFixed(2)} ₪
                 </p>
-                <button className="checkout-btn">המשך לתשלום מאובטח</button>
+                {/*onClick={moveToCheckout()}*/}
+                <button className="checkout-btn"onClick={moveToCheckout}>המשך לתשלום מאובטח</button>
             </div>
         </div>
     );

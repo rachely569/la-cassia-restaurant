@@ -17,8 +17,6 @@ export default function Foods() {
         const allCategories = foodFromStore.map(item => item.nameCategory ? item.nameCategory.trim() : '');
         return ['הכל', ...new Set(allCategories)];
     }, [foodFromStore]); 
-
-
     // const sortButtonText = `מיון מחיר ${sortOrder === 'asc' ? '↑' : sortOrder === 'desc' ? '↓' : ''}`;
     const displayList = filteredFoods.length > 0 || selectedCategory !== 'הכל' ? filteredFoods : foodFromStore;
 
